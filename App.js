@@ -16,7 +16,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { createMaterialBottomTabNavigator } from "@react-navigation/material-bottom-tabs";
 
 //Importação da biblioteca de ícones
-import { Ionicons, Entypo } from "@expo/vector-icons";
+import { Ionicons, Entypo, AntDesign } from "@expo/vector-icons";
 
 //importação das telas
 import Aula from "./scr/tabs/Aula";
@@ -76,9 +76,7 @@ function VideoStack() {
 function MyTabs() {
   return (
     <Tab.Navigator>
-
-
-
+      
       <Tab.Screen
         name="HomeTab"
         component={HomeStack}
@@ -90,17 +88,16 @@ function MyTabs() {
         }}
       />
 
-      <Tab.Screen
+      {/* <Tab.Screen
         name="Vídeos"
         component={VideoStack}
         options={{
           tabBarIcon: ({ size, color }) => (
-            <Entypo name="video" color="#34495e" size={26} />
+            <AntDesign name="stepbackward" size={24} color="black" />
           ),
         }}
-      />
-
-
+      /> */}
+      
       <Tab.Screen
         name="Aula"
         component={AulaStack}
@@ -111,7 +108,8 @@ function MyTabs() {
           tabBarLabel: "Aulas",
         }}
       />
-      <Tab.Screen
+
+      {/* <Tab.Screen
         name="Treino"
         component={TreinoStack}
         options={{
@@ -119,7 +117,8 @@ function MyTabs() {
             <Ionicons name="barbell-sharp" size={24} color="#34495e" />
           ),
         }}
-      />
+      /> */}
+
       <Tab.Screen
         name="Perfil"
         component={PerfilStack}
@@ -129,6 +128,7 @@ function MyTabs() {
           ),
         }}
       />
+
     </Tab.Navigator>
   );
 }

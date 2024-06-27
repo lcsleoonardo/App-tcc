@@ -24,22 +24,30 @@ export default function Home({ navigation }) {
             style={styles.accessClassButton}
             onPress={() => navigation.navigate('Matricula')}
           >
-            <Text style={styles.buttonText}>Acessar aula</Text>
+            <Text style={styles.buttonText}>Aceleradoras</Text>
           </TouchableOpacity>
           <TouchableOpacity
             style={styles.accessTrainingButton}
             onPress={() => navigation.navigate('Treino')}
           >
-            <Text style={styles.buttonText}>Acessar treino</Text>
+            <Text style={styles.buttonText}>Incubadoras</Text>
           </TouchableOpacity>
         </View>
 
+        <View style={styles.box}>
         <Image
           style={styles.workoutImage}
-          source={require('../../assets/gymm.png')}
+          source={require('../../assets/imagem-engrenagens.jpeg')}
           resizeMode="contain"
         />
-
+        
+        <Image
+          style={styles.workoutImage}
+          source={require('../../assets/imagem-quebra.cbç.jpg')}
+          resizeMode="contain"
+        />
+        </View>
+        
         <View style={styles.upgradeButtonContainer}>
           <TouchableOpacity
             style={styles.upgradeButton}
@@ -66,6 +74,7 @@ const styles = StyleSheet.create({
   headerContainer: {
     alignItems: 'center',
     width: '100%',
+    justifyContent: 'center'
   },
   greetingText: {
     fontSize: 18,
@@ -77,7 +86,7 @@ const styles = StyleSheet.create({
   planText: {
     fontSize: 22,
     color: '#34495E',
-    padding: 10,
+    padding: 50,
   },
   sessionInfoContainer: {
     alignItems: 'center',
@@ -88,6 +97,7 @@ const styles = StyleSheet.create({
   sessionInfoText: {
     fontSize: 30,
     fontWeight: 'bold',
+    marginLeft: 55,
   },
   buttonRow: {
     flexDirection: 'row',
@@ -121,9 +131,14 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     fontSize: 15,
   },
+
+  box: {
+    flexDirection: 'row',
+  },
+
   workoutImage: {
-    width: 300,
-    height: 250,
+    width: 200,
+    height: 200,
   },
   upgradeButtonContainer: {
     flexDirection: 'column',
